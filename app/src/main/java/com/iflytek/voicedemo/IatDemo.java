@@ -291,7 +291,8 @@ public class IatDemo extends Activity implements OnClickListener {
 			}
 			
 			if (isLast) {
-
+					//
+				mIat.startListening(mRecognizerListener);
 
 			}
 		}
