@@ -289,11 +289,10 @@ public class IatDemo extends Activity implements OnClickListener {
 			}else{
 				printResult(results);
 			}
-			
+			//System.out.println("NoUIisLast:"+isLast);
+			//开启连续语音识别
 			if (isLast) {
-					//
-				//mIat.startListening(mRecognizerListener);
-
+				mIat.startListening(mRecognizerListener);
 			}
 		}
 
@@ -347,7 +346,14 @@ public class IatDemo extends Activity implements OnClickListener {
 			}else{
 				printResult(results);
 			}
-			
+			//System.out.println("UIisLast:"+isLast);
+
+			//显示听写界面才会调用此条件
+			//开启连续语音识别
+			if (isLast) {
+				//mIat.startListening(mRecognizerListener);
+			}
+
 		}
 
 		/**
@@ -438,6 +444,15 @@ public class IatDemo extends Activity implements OnClickListener {
 				mIat.setParameter( SpeechConstant.TRANS_LANG, "en" );
 			}
 		}
+
+		/**
+		 * 注释下边这两行：不设置静音监测
+		 *  注释之后，可以进行较长一次的语音识别
+		 *  一般来说 连续语音识别是 一次激活多次识别，就是不进行静音检测，但是网络开销较大，识别效果差    而不是一直开着监听是否说话，这样很可能导致程序死掉
+		 *
+		 *         在语音记事界面只需要注释下边两行，可以进行较长一次的语音识别
+		 *
+		 */
 
 		// 设置语音前端点:静音超时时间，即用户多长时间不说话则当做超时处理
 		mIat.setParameter(SpeechConstant.VAD_BOS, mSharedPreferences.getString("iat_vadbos_preference", "4000"));
