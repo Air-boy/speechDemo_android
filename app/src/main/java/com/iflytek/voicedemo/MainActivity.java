@@ -74,6 +74,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		case 7:
 			intent = new Intent(MainActivity.this,OnlineFaceDemo.class);
 			break;
+		case 8:
+			intent = new Intent(MainActivity.this,StartAutoSpeech.class);
+			break;
 		default:
 			break;
 		}
@@ -85,7 +88,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	// Menu 列表
 	String items[] = { "立刻体验语音听写", "立刻体验语法识别", "立刻体验语义理解", "立刻体验语音合成",
-			"立刻体验语音评测", "立刻体验语音唤醒", "立刻体验声纹密码","立刻体验人脸识别" };
+			"立刻体验语音评测", "立刻体验语音唤醒", "立刻体验声纹密码","立刻体验人脸识别","语音听写与合成" };
 
 	private class SimpleAdapter extends BaseAdapter {
 		public View getView(int position, View convertView, ViewGroup parent) {

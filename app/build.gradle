@@ -29,4 +29,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('src/main/jniLibs/Msc.jar')
     compile files('src/main/jniLibs/Sunflower.jar')
+    compile 'com.squareup.okhttp:okhttp:2.7.5'
 }

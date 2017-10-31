@@ -27,6 +27,11 @@
         <activity android:name="com.iflytek.speech.setting.UnderstanderSettings" >
         </activity>
         <activity
+            android:name="com.iflytek.voicedemo.StartAutoSpeech"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name="com.iflytek.voicedemo.IatDemo"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
             android:screenOrientation="portrait" >
